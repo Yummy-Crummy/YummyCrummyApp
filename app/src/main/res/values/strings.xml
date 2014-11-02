@@ -2,7 +2,17 @@
 <resources>
 
     <string name="app_name">YummyCrummyApp</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="edit_message">Enter Username</string>
+    <string name="button_send">Send</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_create_new_profile_screen">CreateNewProfileScreen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_add_profile_screen">AddProfileScreen</string>
+    <string name="title_activity_view_edit_profile_screen">ViewEditProfileScreen</string>
+    <string name="title_activity_view_edit_profile_screen2">ViewEditProfileScreen2</string>
+    <string name="title_activity_view_restaurant_rating_screen">ViewRestaurantRatingScreen</string>
+    <string name="title_activity_look_up_restaurant_screen">LookUpRestaurantScreen</string>
 
 </resources>
