@@ -5,11 +5,18 @@
     android:orientation="horizontal"
     android:weightSum="1">
 
-    <EditText android:id="@+id/edit_message"
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message"
-        android:layout_weight="0.87"
-        android:selectAllOnFocus="false" />
+        android:layout_height="61dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Yummy Crummy"
+        android:id="@+id/textView18" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="Begin"
+        android:id="@+id/beginButton"
+        android:layout_gravity="center_vertical" />
 
 </LinearLayout>

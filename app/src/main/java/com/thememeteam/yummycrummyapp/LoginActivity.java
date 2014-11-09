@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.ContentResolver;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -83,14 +84,33 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         });
 
         mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+       // mProgressView = findViewById(R.id.login_progress);
+
+
+        Button createNewAccount;
+        createNewAccount = (Button)findViewById(R.id.createNewAccount);
+        createNewAccount.setOnClickListener(new OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                switch(view.getId())
+                {
+                    case R.id.createNewAccount:
+                        createNewAccountClick();
+                        break;
+                }
+            }
+        });
     }
 
     private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
     }
 
-
+    private void createNewAccountClick()
+    {
+        startActivity(new Intent("com.thememeteam.yummycrummyapp.CreateNewAccountActivity"));
+    }
     /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the

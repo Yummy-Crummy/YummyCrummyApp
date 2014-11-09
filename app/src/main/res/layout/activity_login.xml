@@ -9,9 +9,6 @@
     android:weightSum="1">
 
     <!-- Login progress -->
-    <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" android:visibility="gone" />
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
         android:layout_height="163dp"
@@ -44,8 +41,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create New Profile"
-        android:id="@+id/button"
+        android:text="Create New Account"
+        android:id="@+id/createNewAccount"
         android:layout_gravity="center_horizontal" />
 
     <TextView

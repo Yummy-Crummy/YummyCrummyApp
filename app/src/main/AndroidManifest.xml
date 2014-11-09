@@ -25,10 +25,20 @@
             android:name="com.thememeteam.yummycrummyapp.LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="com.thememeteam.yummycrummyapp.LoginActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.thememeteam.yummycrummyapp.CreateNewProfileScreen"
             android:label="@string/title_activity_create_new_profile_screen" >
+            <intent-filter>
+                <action android:name="com.thememeteam.yummycrummyapp.CreateNewAccountActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.thememeteam.yummycrummyapp.HomeScreen"
