@@ -10,74 +10,75 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/txtName"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:hint="Name" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:text="Password"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:id="@+id/txtPassword"
+        android:layout_below="@+id/txtName"
+        android:layout_alignLeft="@+id/txtName"
+        android:layout_alignStart="@+id/txtName"
+        android:hint="Password" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:text="Password" />
+        android:id="@+id/txtConfirmPassword"
+        android:layout_below="@+id/txtPassword"
+        android:layout_alignRight="@+id/txtPassword"
+        android:layout_alignEnd="@+id/txtPassword"
+        android:hint="Confirm Password" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText4"
-        android:text="E-mail"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/txtEmail"
+        android:layout_below="@+id/txtConfirmPassword"
+        android:layout_centerHorizontal="true"
+        android:hint="E-mail" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText5"
-        android:text="Birthday"
-        android:layout_below="@+id/editText4"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/txtBday"
+        android:layout_below="@+id/txtEmail"
+        android:layout_centerHorizontal="true"
+        android:hint="Birthday mm/dd/yyyy" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText6"
-        android:layout_toStartOf="@+id/editText5"
-        android:text="Gender"
-        android:layout_below="@+id/editText5"
-        android:layout_alignLeft="@+id/editText5"
-        android:layout_alignStart="@+id/editText5"
-        android:layout_alignRight="@+id/editText5"
-        android:layout_alignEnd="@+id/editText5" />
+        android:id="@+id/txtGender"
+        android:layout_toStartOf="@+id/txtBday"
+        android:layout_toLeftOf="@+id/txtBday"
+        android:layout_below="@+id/txtBday"
+        android:layout_alignLeft="@+id/txtBday"
+        android:layout_alignStart="@+id/txtBday"
+        android:layout_alignRight="@+id/txtBday"
+        android:layout_alignEnd="@+id/txtBday"
+        android:hint="Male or Female" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Facebook"
-        android:id="@+id/button2"
+        android:id="@+id/btnFacebook"
         android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4" />
+        android:layout_alignLeft="@+id/btnSubmit"
+        android:layout_alignStart="@+id/btnSubmit" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,24 +86,24 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Or Sign In With"
         android:id="@+id/textView3"
-        android:layout_below="@+id/button4"
+        android:layout_below="@+id/btnSubmit"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload Picture"
-        android:id="@+id/button3"
-        android:layout_below="@+id/editText6"
-        android:layout_alignLeft="@+id/editText6"
-        android:layout_alignStart="@+id/editText6" />
+        android:id="@+id/btnPicture"
+        android:layout_below="@+id/txtGender"
+        android:layout_alignLeft="@+id/txtGender"
+        android:layout_alignStart="@+id/txtGender" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
+        android:id="@+id/btnSubmit"
+        android:layout_below="@+id/btnPicture"
         android:layout_centerHorizontal="true"
         android:enabled="false" />
 
@@ -113,8 +114,8 @@
         android:text="*"
         android:id="@+id/textView4"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText" />
+        android:layout_toRightOf="@+id/txtName"
+        android:layout_toEndOf="@+id/txtName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -122,9 +123,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="*"
         android:id="@+id/textView5"
-        android:layout_below="@+id/editText"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText" />
+        android:layout_below="@+id/txtName"
+        android:layout_toRightOf="@+id/txtName"
+        android:layout_toEndOf="@+id/txtName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -132,9 +133,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="*"
         android:id="@+id/textView6"
-        android:layout_below="@+id/editText2"
-        android:layout_toRightOf="@+id/editText2"
-        android:layout_toEndOf="@+id/editText2" />
+        android:layout_below="@+id/txtPassword"
+        android:layout_toRightOf="@+id/txtPassword"
+        android:layout_toEndOf="@+id/txtPassword" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -142,9 +143,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="*"
         android:id="@+id/textView7"
-        android:layout_below="@+id/editText3"
-        android:layout_toRightOf="@+id/editText3"
-        android:layout_toEndOf="@+id/editText3" />
+        android:layout_below="@+id/txtConfirmPassword"
+        android:layout_toRightOf="@+id/txtConfirmPassword"
+        android:layout_toEndOf="@+id/txtConfirmPassword" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,7 +153,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="* Required Field"
         android:id="@+id/textView8"
-        android:layout_toStartOf="@+id/button4"
+        android:layout_toStartOf="@+id/btnSubmit"
+        android:layout_toLeftOf="@+id/btnSubmit"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
