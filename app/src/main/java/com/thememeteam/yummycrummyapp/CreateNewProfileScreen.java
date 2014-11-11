@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,9 @@ import java.util.List;
 public class CreateNewProfileScreen extends Activity {
 
     EditText nameTxt, passwordTxt, confirmPasswordTxt, emailTxt, bdayTxt, genderTxt;
-    List<Account> Accounts = new ArrayList<Account>();
+    //List<Account> Accounts = new ArrayList<Account>();
+    YummyCrummyDatabaseHelper dbHelper;
+    private static final String TAG = "CreateNewProfileScreen";
 
 
 
@@ -33,15 +36,27 @@ public class CreateNewProfileScreen extends Activity {
         emailTxt = (EditText) findViewById(R.id.txtEmail);
         bdayTxt = (EditText) findViewById(R.id.txtBday);
         genderTxt = (EditText)findViewById(R.id.txtGender);
+        dbHelper = new YummyCrummyDatabaseHelper(getApplicationContext());
 
         Button facebookBtn = (Button) findViewById(R.id.btnFacebook);
         Button uploadPicBtn = (Button) findViewById(R.id.btnPicture);
+
         final Button submitBtn = (Button) findViewById(R.id.btnSubmit);
+
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Accounts.add(new Account(0,nameTxt.getText().toString(),passwordTxt.getText().toString(),confirmPasswordTxt.getText().toString(),emailTxt.getText().toString(),bdayTxt.getText().toString(),genderTxt.getText().toString()));
-                Toast.makeText(getApplicationContext(), "Your Account has been created!", Toast.LENGTH_SHORT).show();
+                Log.v(TAG,"button has been clicked");
+                Account account = new Account(0,
+                                              String.valueOf(nameTxt.getText()),
+                                              String.valueOf(passwordTxt.getText()),
+                                              String.valueOf(confirmPasswordTxt.getText()),
+                                              String.valueOf(emailTxt.getText()),
+                                              String.valueOf(bdayTxt.getText()),
+                                              String.valueOf(genderTxt.getText()));
+               dbHelper.createAccount(account);
+               //Accounts.add(account);
+               Toast.makeText(getApplicationContext(), "Your Account has been created!", Toast.LENGTH_SHORT).show();
             }
         });
 
