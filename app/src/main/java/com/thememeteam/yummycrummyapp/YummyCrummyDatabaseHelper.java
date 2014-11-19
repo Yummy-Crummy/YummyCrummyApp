@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * Created by Lauren on 11/9/2014.
+ *
  */
 public class YummyCrummyDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "yummycrummydb",
