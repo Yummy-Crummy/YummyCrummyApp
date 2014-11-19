@@ -14,5 +14,6 @@
     <string name="title_activity_view_edit_profile_screen2">ViewEditProfileScreen2</string>
     <string name="title_activity_view_restaurant_rating_screen">ViewRestaurantRatingScreen</string>
     <string name="title_activity_look_up_restaurant_screen">LookUpRestaurantScreen</string>
+    <string name="title_activity_test_db">TestDB</string>
 
 </resources>

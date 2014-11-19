@@ -41,6 +41,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.thememeteam.yummycrummyapp.TestDB"
+            android:label="@string/title_activity_test_db" >
+            <intent-filter>
+                <action android:name="com.thememeteam.yummycrummyapp.TestDB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.thememeteam.yummycrummyapp.HomeScreen"
             android:label="@string/title_activity_home_screen" >
         </activity>
@@ -64,6 +73,7 @@
             android:name="com.thememeteam.yummycrummyapp.LookUpRestaurantScreen"
             android:label="@string/title_activity_look_up_restaurant_screen" >
         </activity>
+
     </application>
 
 </manifest>
